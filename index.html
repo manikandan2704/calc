@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-
-    <input id="value" type="text">
-    <input id="val" type="text">
-    <button onclick="mufuntion()">+</button>
-    <button>-</button>
-    <button>*</button>
-    <button>/</button>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <input id="value1" type="text" />
+    <input id="value2" type="text" />
+    <button onclick="myfuntion()">submit</button>
+    <button onclick="func()">+</button>
+    <button onclick="func1()">-</button>
+    <button onclick="func2()">*</button>
+    <button onclick="func3()">/</button>
     <p id="text"></p>
-    
-</body>
-<script src="js/script.js">
-    document.getElementById("text").innerHTML="part"
-</script>
+
+    <script>
+      function myfuntion() {
+        let val1 = parseInt(document.getElementById("value1").value);
+        let val2 = parseInt(document.getElementById("value2").value);
+        let display = (document.getElementById("text").innerHTML =
+          val1 + "," + val2);
+      }
+      function func() {
+        let val1 = parseInt(document.getElementById("value1").value);
+        let val2 = parseInt(document.getElementById("value2").value);
+        let display=(document.getElementById("text").innerHTML = val1+val2)
+      }
+      function func1() {
+        let val1 = parseInt(document.getElementById("value1").value);
+        let val2 = parseInt(document.getElementById("value2").value);
+        let display=(document.getElementById("text").innerHTML = val1-val2)
+      }
+      function func2() {
+        let val1 = parseInt(document.getElementById("value1").value);
+        let val2 = parseInt(document.getElementById("value2").value);
+        let display=(document.getElementById("text").innerHTML = val1*val2)
+      }
+      function func3() {
+        let val1 = parseInt(document.getElementById("value1").value);
+        let val2 = parseInt(document.getElementById("value2").value);
+        let display=(document.getElementById("text").innerHTML = val1/val2)
+      }
+    </script>
+  </body>
 </html>
